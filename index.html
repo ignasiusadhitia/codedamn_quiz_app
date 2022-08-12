@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Quiz App</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <span id=leaderboard>
+            View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+        </span>
+
+        <span id="timeCountWrapper">
+            <span id=time></span>
+        </span>
+
+    </header>
+
+    <main>
+        <section id="introSection">
+            <div class="content-wrapper">
+                <h2>Coding Quiz Challenge</h2>
+                <p>Try to answer to following code-related questions within the time limit.</p>
+                <p>Keep in mind that incorrect answers will penalize your score!</p>
+                <button id="startQuizButton">Start Quiz</button>
+            </div>
+        </section>
+        <section id="quizSection">
+            <div class="content-wrapper">
+                <h2 id="questionText">Commonly used data types DO NOT include:</h2>
+                <div id="optionsWrapper">
+                    <div id="optionOne"></div>
+                    <div id="optionTwo"></div>
+                    <div id="optionThree"></div>
+                    <div id="optionFour"></div>
+                </div>
+                <div id="responseText">
+                    <span id="response"></span>
+                </div>
+            </div>
+        </section>
+        <section id="resultsSection">
+            <div class="content-wrapper">
+                <h2>All done!</h2>
+                <p>Your final score is <span id="finalScore"></span></p>
+
+                <form id="form">
+                    <label for="initials">Enter initials:</label>
+                    <input type="text" name="initials" id="initials">
+                    <button id="submitScoreButton" type="submit" name="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        <section id="highScoresSection">
+            <div class="content-wrapper">
+                <h2>Highscores</h2>
+                <ol id="highScoresList"></ol>
+                <div id="actionButtonsWrapper">
+                    <button id="goBackButton">Go Back</button><button id="clearScoresButton">Clear Highscores</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
