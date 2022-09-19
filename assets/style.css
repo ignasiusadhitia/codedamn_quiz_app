@@ -98,6 +98,10 @@ main > #quizSection > .content-wrapper > #optionsWrapper .option {
   cursor: pointer;
 }
 
+main > #quizSection > .content-wrapper > #optionsWrapper .option:hover {
+  background: #279a96;
+}
+
 main > #quizSection > .content-wrapper > #responseText {
   padding: 15px 0;
   border-top: 1px solid #d3d3d3;

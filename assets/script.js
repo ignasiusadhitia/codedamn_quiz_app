@@ -60,6 +60,8 @@ const timeCountWrapper = document.getElementById("timeCountWrapper");
 timeCountWrapper.style.display = "none";
 const responseText = document.getElementById("responseText");
 const finalScore = document.getElementById("finalScore");
+const leaderboardButton = document.getElementById("leaderboard");
+leaderboardButton.style.pointerEvents = "auto";
 
 const showIntroSection = () => {
   introSection.style.display = "block";
@@ -74,6 +76,7 @@ const showQuizSection = () => {
   quizSection.style.display = "block";
   resultsSection.style.display = "none";
   highScoresSection.style.display = "none";
+  leaderboardButton.style.pointerEvents = "none";
 
   showQuestions(questionCount);
   startTimer(10);
@@ -88,6 +91,7 @@ const showResultsSection = () => {
   if (!isAnswered) {
     finalScore.innerText = -100;
   }
+  leaderboardButton.style.pointerEvents = "auto";
 };
 
 const showHighScoresSection = () => {
@@ -316,5 +320,4 @@ clearScoresButton.addEventListener("click", function () {
   highScoresList.innerHTML = "";
 });
 
-const leaderboardButton = document.getElementById("leaderboard");
 leaderboardButton.addEventListener("click", showHighScoresSection);
